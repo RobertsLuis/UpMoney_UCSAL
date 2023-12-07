@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+
+  <title>Up Money</title>
+</head>
+<body>
+
+
+<div id="banner">
+  <img id="logo" src="img/Up Money.png" alt="Sua Logo">
+
+  <div id="menu">
+    <a href="#menu">CONTROLE DE GASTOS</a>
+    <a href="#form-box2">INVESTIMENTOS</a>
+    <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+  </div>
+</div>
+
+<div id="hidden-menu">
+    <a href="#form-box1">Controle de Gastos</a>
+    <a href="#form-box2">Investimentos</a>
+</div>
+
+<div class="forms">
+    <div class="page-form" id="form-box1">
+        <h2>Controle de Gastos</h2>
+        <form id="form1"> 
+        <div class="form-group" id="controle-de-gastos">
+            <label for="salario">Salário</label>
+            <div class="form-input-group">
+                <input type="number" id="salario" name="salario" min="0" step="1000" placeholder="R$ 0,00" required>
+                <label>R$</label>
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label>Métodologia</label>
+            <div class="radio-group">
+                <input type="radio" id="metodologia1" name="metodologia" value="1" checked>
+                <label for="metodologia1">70 | 20 | 10</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="metodologia2" name="metodologia" value="2">
+                <label for="metodologia2">50 | 30 | 20</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="metodologia3" name="metodologia" value="3">
+                <label for="metodologia3">30 | 30 | 30 | 10</label>
+            </div>
+        </div>
+    
+        <div class="button-group">
+            <button id="limpar" type="button" onclick="limparFormulario('1')">Limpar</button>
+            <button id="mostrar-resultado" type="button" onclick="mostrarResultado('1')">Mostrar Resultado</button>
+        </div>
+
+        </form>
+
+        
+        <div class="resposta" id="resposta-form1">
+            <hr>
+            <p id="resposta-form1-texto"></p>
+        </div>
+    
+    </div>
+
+    <div class="page-form" id="form-box2">
+        <h2>Investimentos</h2>
+        <form id="form2">
+            <div class="form-group" id="investimentos">
+                <div class="form-input">
+                    <label for="valor-inicial">Valor Inicial</label>
+                    <div class="form-input-group">
+                        <input type="number" id="valor-inicial" name="valor-inicial" placeholder="0,00" min= "0" step="100" required>
+                        <label>R$</label>
+                    </div>
+                </div>
+                <div class="form-input">
+                    <label for="valor-mensal">Aporte mensal</label>
+                    <div class="form-input-group">
+                        <input type="number" id="valor-mensal" name="valor-mensal" placeholder="R$ 0,00" min= "0" step="100" required>
+                        <label>R$</label>
+                    </div>
+                    
+                </div>
+                <div class="form-input">
+                    <label for="taxa-juros">Taxa de Juros (a.m)</label>
+                    <div class="form-input-group">
+                        <input type="number" id="taxa-juros" name="taxa-juros" placeholder="0,00 %" min= "0" step="0.5"required>
+                        <label>%</label>
+                    </div>
+                    
+                </div>
+                <div class="form-input">
+                    <label for="tempo-investimento">Tempo total (anos)</label>
+                    <div class="form-input-group">
+                        <input type="number" id="tempo-investimento" name="tempo-investimento" min= "0" step="1" placeholder="0 anos" required>
+                        <label>A</label>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="limpar" type="button" onclick="limparFormulario('2')">Limpar</button>
+                <button id="mostrar-resultado" type="button" onclick="mostrarResultado('2')">Mostrar Resultado</button>
+            </div>
+        
+        </form>
+
+        <div class="resposta" id="resposta-form2">
+            <hr>
+            <p id="resposta-form2-texto"></p>
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- Restante do conteúdo do seu site aqui -->
+<script src="js/main.js"></script>
+
+<footer>
+    <div id="footer_content">
+        <div id="footer_contacts">
+            <h1>Up Money</h1>
+            <p id="footer-subtitle">Tenha total controle de suas finanças.</p>
+
+            <div id="footer_social_media">
+                <a href="https://github.com/RobertsLuis" class="footer-link" id="github">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/robertoluis/" class="footer-link" id="linkedin">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://wa.me/5571999091773" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        
+        <ul class="footer-list">
+            <li>
+                <h3>Canais recomendados</h3>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@primorico" class="footer-link">Primo Rico</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@MePoupe" class="footer-link">Me Poupe!</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@PrimoPobre" class="footer-link">O Primo Pobre</a>
+            </li>
+        </ul>
+
+
+
+        <div id="footer_subscribe">
+            <h3>Inscreva-se</h3>
+
+            <p>
+                Insira seu e-mail para ficar por dentro de novas soluções financeiras!
+            </p>
+
+            <div id="input_group">
+                <input type="email" id="email">
+                <button id="footer-email-bt">
+                    <i class="fa-regular fa-envelope"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer_copyright">
+        &#169
+        2023 Roberto Luis, direitos autorais reservados. Trabalho para aprovação na matéria de programação front-end
+    </div>
+</footer>
+
+</body>
+</html>

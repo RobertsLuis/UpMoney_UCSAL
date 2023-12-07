@@ -1,0 +1,469 @@
+:root {
+    --color-neutral-0: #1B1056;
+    --color-neutral-10: #3A23BE;
+    --color-neutral-20: #aaaaaa;
+    --color-neutral-30: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("/img/Background\ Up\ Money.png");
+    background-size: contain;
+    background-color: #f0f0f0;
+    /* Cor de fundo se a imagem não carregar */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*  */
+#banner {
+    background-color: var(--color-neutral-0);
+    /* Cor de fundo do banner */
+    text-align: center;
+    padding: 100px;
+    /* Espaçamento interno do banner */
+    box-shadow: 1px 1px 1px;
+}
+
+#logo {
+    max-width: 100%;
+    height: auto;
+}
+
+#menu {
+    background-color: none;
+    /* Cor de fundo do menu de navegação */
+    padding: 0px;
+    /* Espaçamento interno do menu de navegação */
+    text-align: center;
+}
+
+#menu a {
+    color: var(--color-neutral-30);
+    text-decoration: none;
+    margin: 5%;
+    font-size: 18px;
+}
+
+#menu a:hover {
+    opacity: 0.5;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+#hidden-menu {
+    display: none;
+}
+
+.page-form {
+    max-width: 50%;
+    /* Ajuste conforme necessário */
+    margin: 0 auto;
+    /* Centraliza o formulário horizontalmente */
+    padding: 20px;
+    padding-top: 5px;
+    background-color: var(--color-neutral-10);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .500);
+    margin-top: 40px;
+    /* Adiciona espaço entre o banner e o formulário */
+    transition: all 0.4s;
+}
+
+.page-form:hover {
+    max-width: 50.5%;
+    /* Ajuste conforme necessário */
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, .500);
+
+}
+
+.page-form h2 {
+    text-align: left;
+    color: var(--color-neutral-30);
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#investimentos.form-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--color-neutral-30);
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.form-group input:focus {
+    border: solid;
+    border-width: 0.5px;
+    border-color: var(--color-neutral-0);
+}
+
+.form-input-group{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+    align-items: center;
+    width: auto;
+    flex-direction: row;
+}
+
+.radio-group input {
+    margin-right: 10px;
+    padding: 0;
+    width: 5%;
+    height: 30px;
+
+    /* Remova estilos padrão do navegador (opcional, dependendo do navegador) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Estilos comuns para radio buttons */
+    width: 20px;
+    /* Tamanho do radio button */
+    height: 20px;
+    /* Tamanho do radio button */
+    border: 2px solid var(--color-neutral-30);
+    /* Cor da borda do radio button */
+
+    outline: none;
+    /* Remove a borda de foco ao clicar */
+    cursor: default;
+}
+
+.radio-group input:checked {
+    background-color: var(--color-neutral-0);
+    border-color: var(--color-neutral-0);
+}
+
+.radio-group label {
+    padding-top: 10px;
+    margin-right: 50px;
+    width: 100%;
+    height: 30px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    /* Alinha o conteúdo no final do eixo principal (horizontal) */
+    margin-top: 10px;
+    /* Espaçamento superior do botão em relação aos outros elementos do formulário */
+}
+
+button {
+    background-color: var(--color-neutral-0);
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    border: solid;
+    border-width: 1px;
+    border-color: var(--color-neutral-0);
+}
+
+button#limpar {
+    background-color: #3A23BE;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--color-neutral-0);
+    color: var(--color-neutral-0);
+}
+.resposta{
+    margin-top: 30px;
+    color: var(--color-neutral-30);
+}
+footer {
+    margin-top: 40px;
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-0);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+    color: var(--color-neutral-30);
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+} 
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;    
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#github {
+    background: linear-gradient(rgb(255, 255, 255),rgb(134, 134, 134));;
+}
+
+#linkedin {
+    background: linear-gradient(rgb(255, 255, 255),rgb(134, 134, 134));
+}
+
+#whatsapp {
+    background: linear-gradient(rgb(255, 255, 255),rgb(134, 134, 134));
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+.footer-list h3{
+    color: var(--color-neutral-30);
+}
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9;
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+#footer_subscribe h3{
+    color: var(--color-neutral-30);
+}
+
+#footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+
+
+input#email{
+    outline: none;
+    border-color: var(--color-neutral-10);
+    border-radius: 8%;
+    border-width: 1px;
+}
+
+#input_group{
+    display: flex;
+    padding: 10px 0px;
+}
+#footer-email-bt{
+    background-color: var(--color-neutral-10);
+    
+}
+
+#footer-subtitle{
+    color: var(--color-neutral-20);
+}
+
+#footer_copyright{
+    background-color: var(--color-neutral-0);
+    color: var(--color-neutral-20);
+}
+
+#resposta-form1{
+    display: none;
+}
+#resposta-form2{
+    display: none;
+}
+
+/* Adicione uma media query para dispositivos com largura menor ou igual a 768 pixels (ajuste conforme necessário) */
+@media only screen and (max-width: 768px) {
+    #banner {
+        padding: 0px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+
+    #logo {
+        float: left;
+        max-height: 100px;
+        /* Altura máxima da logo em telas menores */
+        margin-left: 15px;
+    }
+
+    #menu {
+        margin-left: auto;
+        text-align: right;
+    }
+
+    #menu a {
+        display: inline-block;
+        /* Permite que os botões fiquem lado a lado */
+        margin: 0 15px;
+        font-size: 15px;
+    }
+
+    #menu a:hover {
+        opacity: 0.5;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    #hidden-menu {
+        display: none;
+    }
+
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-list {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        list-style: none;
+    }
+
+    #investimentos.form-group{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 575px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width: 475px) {
+    #banner {
+        padding: 20px;
+    }
+
+    #logo {
+        float: left;
+        max-height: 100px;
+        margin-left: 20px;
+    }
+
+    #menu {
+        text-align: right;
+    }
+
+    #menu a {
+        display: none;
+        /* Oculta os links de navegação padrão */
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+    }
+
+    #hidden-menu {
+        display: none;
+        float: right;
+        top: 5%;
+        /* Ajuste conforme necessário para posicionar o menu oculto abaixo do banner */
+        left: 0;
+        width: 50%;
+        background-color: var(--color-neutral-0);
+        text-align: center;
+    }
+
+    #hidden-menu a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 410px) {
+
+.button-group{
+    background-color: var(--color-neutral-10);
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding: 0;
+    
+}
+.button-group button{
+    margin-top: 8px;
+    
+}
+}
+
+.mostrar-resposta {
+    opacity: 1; /* Opacidade total quando a classe mostrar-resposta é aplicada */
+    max-height: 1000px; /* Ajuste conforme necessário para a altura máxima que você espera para a resposta */
+  }
