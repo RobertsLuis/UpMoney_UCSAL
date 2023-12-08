@@ -1,4 +1,7 @@
+/* GENERAL CONFIGS */
+
 :root {
+    /* Paleta de cores */
     --color-neutral-0: #1B1056;
     --color-neutral-10: #3A23BE;
     --color-neutral-20: #aaaaaa;
@@ -6,26 +9,27 @@
 }
 
 body {
+    /* Configurações da tela de fundo */
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background-image: url("/img/Background\ Up\ Money.png");
     background-size: contain;
     background-color: #f0f0f0;
-    /* Cor de fundo se a imagem não carregar */
+    
 }
 
 html {
+    /* Efeito de scroll suave*/
     scroll-behavior: smooth;
 }
 
-/*  */
+/* HEADER */
+
 #banner {
     background-color: var(--color-neutral-0);
-    /* Cor de fundo do banner */
     text-align: center;
     padding: 100px;
-    /* Espaçamento interno do banner */
     box-shadow: 1px 1px 1px;
 }
 
@@ -36,9 +40,7 @@ html {
 
 #menu {
     background-color: none;
-    /* Cor de fundo do menu de navegação */
     padding: 0px;
-    /* Espaçamento interno do menu de navegação */
     text-align: center;
 }
 
@@ -61,45 +63,50 @@ html {
     display: none;
 }
 
+/* CONTENT */
+
 .page-form {
+    /* Formato formulário */
     max-width: 50%;
-    /* Ajuste conforme necessário */
     margin: 0 auto;
-    /* Centraliza o formulário horizontalmente */
     padding: 20px;
     padding-top: 5px;
     background-color: var(--color-neutral-10);
     border-radius: 10px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, .500);
     margin-top: 40px;
-    /* Adiciona espaço entre o banner e o formulário */
+    /* Suavizar o efeito do hover */
     transition: all 0.4s;
 }
 
 .page-form:hover {
+    /* Efeito hover formulario */
     max-width: 50.5%;
-    /* Ajuste conforme necessário */
     box-shadow: 5px 20px 20px rgba(0, 0, 0, .500);
 
 }
 
 .page-form h2 {
+    /* Títulos formulário */
     text-align: left;
     color: var(--color-neutral-30);
 }
 
 
 .form-group {
+       /* Espaçamento */
     margin-bottom: 20px;
 }
 
 #investimentos.form-group{
+    /* Configuração form investimentos */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
 }
 
 .form-group label {
+    /* Configuração dos textos - forms */
     color: var(--color-neutral-30);
     display: block;
     margin-bottom: 5px;
@@ -107,6 +114,7 @@ html {
 }
 
 .form-group input {
+    /* Configuração dos input - forms */
     outline: none;
     border: none;
     border-radius: 10px;
@@ -117,18 +125,21 @@ html {
 }
 
 .form-group input:focus {
+    /* Efeito no clique nos inputs */
     border: solid;
     border-width: 0.5px;
     border-color: var(--color-neutral-0);
 }
 
 .form-input-group{
+    /* Configuração agrupamento - input + "unidade de medida" */
     display: flex;
     align-items: center;
     gap: 0.3rem;
 }
 
 .radio-group {
+    /* Configuração agrupamento - radio buttons + text */
     display: flex;
     justify-content: flex-start;
     margin-top: 5px;
@@ -138,35 +149,31 @@ html {
 }
 
 .radio-group input {
+    /* Configuração radio button */
     margin-right: 10px;
     padding: 0;
     width: 5%;
     height: 30px;
-
-    /* Remova estilos padrão do navegador (opcional, dependendo do navegador) */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
-    /* Estilos comuns para radio buttons */
     width: 20px;
-    /* Tamanho do radio button */
     height: 20px;
-    /* Tamanho do radio button */
     border: 2px solid var(--color-neutral-30);
-    /* Cor da borda do radio button */
 
-    outline: none;
     /* Remove a borda de foco ao clicar */
+    outline: none;
     cursor: default;
 }
 
 .radio-group input:checked {
+    /* Configuração radio button - ativado */
     background-color: var(--color-neutral-0);
     border-color: var(--color-neutral-0);
 }
 
 .radio-group label {
+    /* Configuração texto radio button */
     padding-top: 10px;
     margin-right: 50px;
     width: 100%;
@@ -174,14 +181,14 @@ html {
 }
 
 .button-group {
+    /* Configuração agrupamento botões limpar e mostrar resultado */
     display: flex;
     justify-content: flex-end;
-    /* Alinha o conteúdo no final do eixo principal (horizontal) */
     margin-top: 10px;
-    /* Espaçamento superior do botão em relação aos outros elementos do formulário */
 }
 
 button {
+    /* Configuração padrão dos botões */
     background-color: var(--color-neutral-0);
     color: white;
     padding: 10px 20px;
@@ -193,33 +200,53 @@ button {
 }
 
 button:hover {
+    /* Efeito hover nos botões */
     border: solid;
     border-width: 1px;
     border-color: var(--color-neutral-0);
 }
 
 button#limpar {
+    /* Configuração padrão dos botões Limpar */
     background-color: #3A23BE;
     border: solid;
     border-width: 1px;
     border-color: var(--color-neutral-0);
     color: var(--color-neutral-0);
 }
+
 .resposta{
+    /* Configuração padrão das respostas dos formulários */
     margin-top: 30px;
     color: var(--color-neutral-30);
 }
+
+#resposta-form1{
+    /* Estado padrão do agrupamento - linha de divisão + respostas do form 1*/
+    /* Será modificado pelo js */
+    display: none;
+}
+#resposta-form2{
+    /* Estado padrão do agrupamento - linha de divisão + respostas do form 1*/
+    /* Será modificado pelo js */
+    display: none;
+}
+
+/* FOOTER */
 footer {
+    /* Configuração geral rodapé */
     margin-top: 40px;
     width: 100%;
     color: var(--color-neutral-40);
 }
 
 .footer-link {
+    /* Configuração geral links rodapé */
     text-decoration: none;
 }
 
 #footer_content {
+    /* Configuração da estrutura do rodapé */
     background-color: var(--color-neutral-0);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -232,10 +259,13 @@ footer {
 }
 
 #footer_social_media {
+    /* Configuração geral do agrupamento dos ícones de rede social */
     display: flex;
     gap: 2.5rem;
     margin-top: 1.5rem;
 } 
+
+/* Configuração dos ícones de rede social */
 
 #footer_social_media .footer-link {
     display: flex;
@@ -245,6 +275,7 @@ footer {
     width: 2.5rem;
     color: var(--color-neutral-40);
     border-radius: 50%;
+    background: linear-gradient(rgb(255, 255, 255),rgb(134, 134, 134));
     transition: all 0.4s;
 }
 
@@ -253,22 +284,12 @@ footer {
 }
 
 #footer_social_media .footer-link:hover {
+    /* Efeito nos icones da rede social */
     opacity: 0.8;
 }
 
-#github {
-    background: linear-gradient(rgb(255, 255, 255),rgb(134, 134, 134));;
-}
-
-#linkedin {
-    background: linear-gradient(rgb(255, 255, 255),rgb(134, 134, 134));
-}
-
-#whatsapp {
-    background: linear-gradient(rgb(255, 255, 255),rgb(134, 134, 134));
-}
-
 .footer-list {
+    /* Configuração da lista de canais recomendados */
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -286,7 +307,9 @@ footer {
     color: #7f37c9;
 }
 
+/* Configuração da aba de inscrição do rodapé */
 #footer_subscribe {
+    
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -312,9 +335,9 @@ input#email{
     display: flex;
     padding: 10px 0px;
 }
+
 #footer-email-bt{
     background-color: var(--color-neutral-10);
-    
 }
 
 #footer-subtitle{
@@ -324,18 +347,17 @@ input#email{
 #footer_copyright{
     background-color: var(--color-neutral-0);
     color: var(--color-neutral-20);
+    padding: 0px 25px;
 }
 
-#resposta-form1{
-    display: none;
-}
-#resposta-form2{
-    display: none;
-}
 
-/* Adicione uma media query para dispositivos com largura menor ou igual a 768 pixels (ajuste conforme necessário) */
+
+
+/* Ajustes para tablets */
 @media only screen and (max-width: 768px) {
+    
     #banner {
+        /* Modificação no header */
         padding: 0px;
         height: 100px;
         display: flex;
@@ -343,20 +365,21 @@ input#email{
     }
 
     #logo {
+        /* Adequação da logo */
         float: left;
         max-height: 100px;
-        /* Altura máxima da logo em telas menores */
         margin-left: 15px;
     }
 
     #menu {
+        /* Configuração do agrupamento do menu nav */
         margin-left: auto;
         text-align: right;
     }
 
     #menu a {
+        /* Adequação de cada item do menu nav */
         display: inline-block;
-        /* Permite que os botões fiquem lado a lado */
         margin: 0 15px;
         font-size: 15px;
     }
@@ -365,6 +388,7 @@ input#email{
         opacity: 0.5;
     }
 
+    /* Configuração do agrupamento do menu hamburger */
     .hamburger-menu {
         display: none;
     }
@@ -373,6 +397,14 @@ input#email{
         display: none;
     }
 
+    /* Adequação do formulário de investimentos */
+    #investimentos.form-group{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
+    }
+
+    /* Adequação do rodapé */
     #footer_content {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -383,40 +415,42 @@ input#email{
         padding: 0;
         list-style: none;
     }
-
-    #investimentos.form-group{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 0.5rem;
-    }
+    
+    
 
 }
 
 @media only screen and (max-width: 575px) {
+    /* Adequação do rodapé em telas que atingem o limite de espaçamento dele*/
     #footer_content {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+/* Ajustes para celulares */
 @media only screen and (max-width: 475px) {
+    /* Adequação do header */
     #banner {
         padding: 20px;
     }
 
+    /* Adequação da logo */
     #logo {
         float: left;
         max-height: 100px;
         margin-left: 20px;
     }
 
+    /* Adequação do menu navegação para ficarem ocultos no menu hamburguer*/
     #menu {
         text-align: right;
     }
 
     #menu a {
         display: none;
-        /* Oculta os links de navegação padrão */
     }
 
+    /* Aparição do menu hamburguer e configurações */
     .hamburger-menu {
         display: block;
         cursor: pointer;
@@ -428,7 +462,6 @@ input#email{
         display: none;
         float: right;
         top: 5%;
-        /* Ajuste conforme necessário para posicionar o menu oculto abaixo do banner */
         left: 0;
         width: 50%;
         background-color: var(--color-neutral-0);
@@ -448,6 +481,7 @@ input#email{
 
 }
 
+/* Adequação do agrupamento dos botões para telas ainda menores */
 @media only screen and (max-width: 410px) {
 
 .button-group{
@@ -462,8 +496,3 @@ input#email{
     
 }
 }
-
-.mostrar-resposta {
-    opacity: 1; /* Opacidade total quando a classe mostrar-resposta é aplicada */
-    max-height: 1000px; /* Ajuste conforme necessário para a altura máxima que você espera para a resposta */
-  }
